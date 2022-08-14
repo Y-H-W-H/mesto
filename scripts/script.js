@@ -1,16 +1,18 @@
 
 
 
-let editButton = document.querySelector('.profile__button_edit');
-let saveButton = document.querySelector('popup__button_submit');
+let editButton = document.querySelector('.profile__edit-button');
+let saveButton = document.querySelector('popup__submit-button');
 let popup = document.querySelector('.popup');
 let form = document.querySelector('.popup__form');
 
-let closeButton = document.querySelector('.popup__button_close');
+let closeButton = document.querySelector('.popup__close-button');
 closeButton.addEventListener('click', openPopup);
 
 let popupInputs = document.querySelectorAll('.popup__input');
 let profileInfo = document.querySelectorAll('.profile__text');
+
+
 function openPopup() {
 
   popup.classList.toggle('popup_invisible');

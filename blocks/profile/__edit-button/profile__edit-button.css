@@ -1,5 +1,5 @@
-.profile__button_edit {
-  background: url(../../../../images/Edit-Button.png);
+.profile__edit-button {
+  background: url(../../../images/Edit-Button.png);
 
   border: 2px;
   border-color: white;
@@ -18,7 +18,7 @@
 
 
 
-.profile__button_edit:hover {
+.profile__edit-button:hover {
   opacity: 0.6;
 
 }
@@ -26,7 +26,7 @@
 
 
 @media screen and (max-width: 550px) {
-  .profile__button_edit {
+  .profile__edit-button {
     transform: scale(calc(18/24));
     border-color: white;
 
