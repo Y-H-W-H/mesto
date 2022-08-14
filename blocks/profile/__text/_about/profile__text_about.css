@@ -1,0 +1,41 @@
+.profile__text_about {
+  padding: 0;
+  margin: 0;
+  grid-area: "about";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+
+
+
+}
+
+@media screen and (max-width: 880px) {
+  .profile__text_about {
+    display: flex;
+    justify-self: center;
+    margin-left: calc(24px + 15.25px);
+
+  }
+
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+
+
+
+  .profile__text_about {
+
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+
+
+
+  }
+}

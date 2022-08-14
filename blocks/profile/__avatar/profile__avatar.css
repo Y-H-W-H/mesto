@@ -1,0 +1,21 @@
+.profile__avatar {
+  display: flex;
+  align-self: flex-end;
+  height: 127.5px;
+  width: 127.5px;
+  border-radius: 180%;
+  margin-right: 45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+
+}
+
+
+@media screen and (max-width: 880px) {
+  .profile__avatar {
+    margin: 0;
+    align-self: center;
+
+  }
+}
