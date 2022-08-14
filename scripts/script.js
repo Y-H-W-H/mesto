@@ -9,6 +9,8 @@ let form = document.querySelector('.popup__form');
 let closeButton = document.querySelector('.popup__button_close');
 closeButton.addEventListener('click', openPopup);
 
+let popupInputs = document.querySelectorAll('.popup__input');
+let profileInfo = document.querySelectorAll('.profile__text');
 function openPopup() {
 
   popup.classList.toggle('popup_invisible');
@@ -27,8 +29,7 @@ editButton.addEventListener('click', openPopup);
 
 
 
-let popupInputs = document.querySelectorAll('.popup__input');
-let profileInfo = document.querySelectorAll('.profile__text');
+
 
 function editProfile(event) {
   event.preventDefault();
