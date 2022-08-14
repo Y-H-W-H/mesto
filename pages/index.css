@@ -1,3 +1,5 @@
+@import url(../vendor/fonts/inter.css);
+@import url(../vendor/normalize.css);
 @import url(../blocks/elements/__bottom/elements__bottom.css);
 @import url(../blocks/elements/__card/elements__card.css);
 @import url(../blocks/elements/__header/elements__header.css);
