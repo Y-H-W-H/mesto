@@ -1,8 +1,8 @@
 .header {
 
-  margin: 0 auto 36.25px;
+  margin: 0 auto;
   padding: 0;
-  height: 127.5px;
+  max-height: 127.5px;
 }
 
 .header::after {

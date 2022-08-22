@@ -1,19 +1,25 @@
-.profile__text_name {
+.profile__name {
   margin-bottom: 16px;
   margin-right: 0;
-  margin-top: 18px;
+
   padding: 0;
-  grid-area: "name";
+  grid-area: name;
   font-weight: 500;
   font-size: 42px;
   line-height: 48px;
+  max-width: 294px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 
 
 }
 
 
 @media screen and (max-width: 550px) {
-  .profile__text_name {
+  .profile__name {
+    margin-bottom: 14px;
+
     font-weight: 500;
     font-size: 27px;
     line-height: 33px;
@@ -24,7 +30,7 @@
 }
 
 @media screen and (max-width: 880px) {
-  .profile__text_name {
+  .profile__name {
     margin-left: calc(24px + 15.25px);
   }
 }

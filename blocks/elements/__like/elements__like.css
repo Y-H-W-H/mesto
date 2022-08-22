@@ -1,6 +1,14 @@
 .elements__like {
   margin-right: 30px;
   cursor: pointer;
+  background: url(../../../images/Vector0.svg) rgba(255, 255, 255, 1);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 22px;
+  height: 19px;
+  border: 0;
+
 }
 
 

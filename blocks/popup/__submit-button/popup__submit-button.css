@@ -8,9 +8,10 @@
   color: white;
   font-weight: 400;
   font-size: 18px;
-  margin: 48px auto;
+  margin: 48px auto 37px;
   text-align: center;
   cursor: pointer;
+  border: 0;
 
 
 }
@@ -31,7 +32,7 @@
     font-size: 14px;
     line-height: 17px;
     text-align: center;
-    margin-bottom: 0;
+    margin: 45px auto 25px;
 
   }
 }

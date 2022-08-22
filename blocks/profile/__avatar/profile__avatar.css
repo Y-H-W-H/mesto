@@ -1,10 +1,10 @@
 .profile__avatar {
   display: flex;
   align-self: flex-end;
-  height: 127.5px;
-  width: 127.5px;
+  height: 120px;
+  width: 120px;
   border-radius: 180%;
-  margin-right: 45px;
+  margin-right: 30px;
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;

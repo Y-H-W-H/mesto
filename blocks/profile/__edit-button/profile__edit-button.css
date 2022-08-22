@@ -1,5 +1,5 @@
 .profile__edit-button {
-  background: url(../../../images/Edit-Button.png);
+  background: url(../../../images/Edit-Button.svg);
 
   border: 2px;
   border-color: white;
@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   align-self: center;
-  grid-area: "edit-button";
+  grid-area: edit-button;
   box-sizing: border-box;
   cursor: pointer;
 
