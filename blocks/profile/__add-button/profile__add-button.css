@@ -16,17 +16,17 @@
 
 }
 
-/* не понимаю почему не отображается крестик на кнопке */
+
 
 @media screen and (max-width: 880px) {
 
   .profile__add-button {
 
     background: url(../../../images/Vector.svg);
-    background-image: url(../../../../mesto/images/Rectangle.svg);
+
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 16px;
     width: 282px;
     height: 50px;
     border: 2px solid #FFFFFF;
