@@ -14,11 +14,22 @@
 
 }
 
+
+@media screen and (max-width: 390px) {
+
+  .profile__about {
+    max-width: 220px;
+  }
+}
+
 @media screen and (max-width: 880px) {
   .profile__about {
     display: flex;
     justify-self: center;
     margin-left: calc(24px + 15.25px);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 
   }
 

@@ -7,7 +7,7 @@
 @media screen and (min-width: 564px)and (max-width: 880px) {
   .footer {
     width: calc((282px*2) + 17px);
-    margin: 0 auto;
+    margin: 48px auto 36px;
   }
 }
 
@@ -17,6 +17,6 @@
 
   .footer {
     width: calc(282px*1);
-    margin: 0 auto;
+    margin: 48px auto 36px;
   }
 }

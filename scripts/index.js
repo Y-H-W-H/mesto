@@ -10,13 +10,15 @@ let profileAbout = document.querySelector('.profile__about');
 
 function openPopup() {
   popup.classList.toggle('popup_opened');
-};
+  popupAbout.value = profileAbout.textContent;
+  popupName.value = profileName.textContent;
+
+}
 
 function closePopup() {
   popup.classList.remove('popup_opened');
-  popup.classList.add('popup_invisible');
 
-};
+}
 
 function editProfile(event) {
   event.preventDefault();
@@ -24,7 +26,7 @@ function editProfile(event) {
   profileAbout.textContent = popupAbout.value;
   closePopup();
 
-};
+}
 closeButton.addEventListener('click', closePopup);
 editButton.addEventListener('click', openPopup);
 form.addEventListener('submit', editProfile);

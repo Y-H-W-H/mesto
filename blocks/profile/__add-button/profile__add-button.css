@@ -6,6 +6,8 @@
   height: 50px;
   background: url(../../../images/Add-Button.svg);
   background-repeat: no-repeat;
+  cursor: pointer;
+
 }
 
 

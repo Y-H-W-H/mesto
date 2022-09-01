@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-position: center;
   border: 0;
-  object-fit: cover;
+  background-size: contain;
   width: 32px;
   height: 32px;
   cursor: pointer;
