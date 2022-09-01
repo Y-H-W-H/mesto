@@ -6,8 +6,6 @@
   grid-template-columns: 1fr auto;
   align-self: center;
 
-  padding: 0;
-
   column-gap: 18px;
   justify-items: flex-start;
   align-items: center;
