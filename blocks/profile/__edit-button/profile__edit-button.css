@@ -1,6 +1,6 @@
 .profile__edit-button {
   background: url(../../../images/Edit-Button.svg);
-
+  display: block;
   border: 2px;
   border-color: white;
   background-repeat: no-repeat;
@@ -29,6 +29,8 @@
   .profile__edit-button {
     transform: scale(calc(18/24));
     border-color: white;
+
+
 
 
   }

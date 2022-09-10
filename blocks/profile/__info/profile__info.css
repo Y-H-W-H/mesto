@@ -15,16 +15,10 @@
 
 }
 
-
-@media screen and (max-width: 880px) {
-
+@media screen and (max-width: 390px) {
   .profile__info {
-
-
+    max-width: 350px;
     column-gap: 15.25px;
-
-
-
-
   }
+
 }
