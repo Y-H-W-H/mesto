@@ -20,20 +20,10 @@
     column-gap: 12px;
   }
 
-
-
-
-  .footer {
-    max-width: 590px;
-  }
-
-  .elements {
-
-    margin-bottom: 45px;
-  }
-
-
 }
+
+
+
 
 
 @media screen and (max-width: 600px) {
@@ -43,23 +33,5 @@
   }
 
 
-  .elements {
-    max-width: 100%;
-    margin-bottom: 45px;
-  }
-
-  .header__logo {
-    max-width: 100%;
-  }
-
-  .header {
-
-    max-width: 100%;
-
-  }
-
-  .footer {
-    max-width: 282px;
-  }
 
 }
