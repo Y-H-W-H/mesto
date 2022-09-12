@@ -19,18 +19,16 @@
     grid-template-columns: repeat(2, 282px);
     column-gap: 12px;
   }
-
-
-
-
-
 }
+
+
 
 
 @media screen and (max-width: 600px) {
 
   .elements__list {
     grid-template-columns: min-content;
+
     margin: 36px auto 0;
   }
 
