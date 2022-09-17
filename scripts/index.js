@@ -8,11 +8,11 @@ let profileAbout = document.querySelector('.profile__about');
 function createPopup(type, header, firstPlaceholder, secondPlaceholder) {
   function submitPopup(event) {
     event.preventDefault();
-    if ( type === 'editProfile' ) {
+    if (type === 'editProfile') {
       profileName.textContent = firstInput.value;
       profileAbout.textContent = secondInput.value;
     }
-    if ( type === 'addCard' ) {
+    if (type === 'addCard') {
       elementsList.prepend(addCard(firstInput.value, secondInput.value))
     }
     closePopup();
@@ -22,8 +22,8 @@ function createPopup(type, header, firstPlaceholder, secondPlaceholder) {
     popup.classList.remove('popup_opened');
     popupContent.remove()
   }
-  
-  const popupTemplate = document.querySelector('#popup__content').content;
+
+  const popupTemplate = document.querySelector('#popup__template').content;
   const popupContent = popupTemplate.querySelector('#popup__content').cloneNode(true);
   const popupForm = popupContent.querySelector('.popup__form');
   const popupTitle = popupContent.querySelector('.popup__title');
@@ -33,15 +33,15 @@ function createPopup(type, header, firstPlaceholder, secondPlaceholder) {
   const popupClose = popupContent.querySelector('.popup__close-button');
 
   popupTitle.textContent = header
-  if ( type === 'editProfile') {
-   firstInput.placeholder = firstPlaceholder;
-   secondInput.placeholder = secondPlaceholder
-   firstInput.value = profileName.textContent;
-   secondInput.value = profileAbout.textContent;
+  if (type === 'editProfile') {
+    firstInput.placeholder = firstPlaceholder;
+    secondInput.placeholder = secondPlaceholder
+    firstInput.value = profileName.textContent;
+    secondInput.value = profileAbout.textContent;
   }
-  if ( type === 'addCard') {
-   firstInput.placeholder = firstPlaceholder;
-   secondInput.placeholder = secondPlaceholder
+  if (type === 'addCard') {
+    firstInput.placeholder = firstPlaceholder;
+    secondInput.placeholder = secondPlaceholder
   }
   popupSubmit.textContent = 'Сохранить';
 
@@ -89,7 +89,7 @@ const initialCards = [
     name: 'Мегаполис',
     link: 'https://cdn.stocksnap.io/img-thumbs/960w/modern-building_CDDFKUNH3H.jpg'
   },
-]; 
+];
 
 function addCard(cardName, cardLink) {
   const cardTemplate = document.querySelector('#elements__card').content;
@@ -131,7 +131,7 @@ function createCardPopup(cardName, cardLink) {
   const popupTitle = cardPopup.querySelector('.popup__title--card');
   const popupImage = cardPopup.querySelector('.popup__image');
   const popupClose = cardPopup.querySelector('.popup__close-button--card');
-  
+
   popupImage.src = cardLink;
   popupImage.alt = cardName;
   popupTitle.textContent = cardName
