@@ -33,3 +33,10 @@
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/elements/elements.css);
+@import url(../blocks/elements/__trash-btn/elements__trash-btn.css);
+@import url(../blocks/open-card/open-card.css);
+@import url(../blocks/open-card/__container/open-card__container.css);
+@import url(../blocks/open-card/_active/open-card_active.css);
+@import url(../blocks/open-card/__image/open-card__image.css);
+@import url(../blocks/open-card/__close/open-card__close.css);
+@import url(../blocks/open-card/__header/open-card__header.css);

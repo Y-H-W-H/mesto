@@ -1,8 +1,16 @@
 .elements__image {
   margin: 0;
-
+  width: 282px;
+  height: 282px;
   padding: 0;
   box-sizing: border-box;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+
+
+}
+
+
+.elements__image:hover {
+  cursor: pointer;
 }
