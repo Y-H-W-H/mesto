@@ -4,9 +4,21 @@
   display: block;
   font-weight: 900;
   max-width: 430px;
+
+
+
+
+
+
+
+
 }
 
+
+
+
 @media screen and (max-width: 550px) {
+
   .popup__form {
     width: 238px;
     margin-top: 75px;

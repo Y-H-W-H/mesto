@@ -1,3 +1,5 @@
 .elements__like_active {
-  background: url(../../../../images/Union.svg);
+
+  background-image: url(../../../../images/Union.svg);
+
 }

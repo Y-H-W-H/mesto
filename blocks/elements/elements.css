@@ -5,7 +5,10 @@
   align-items: center;
 }
 
+
+
 @media screen and (max-width: 600px) {
+
   .elements {
     max-width: 100%;
     margin-bottom: 45px;
