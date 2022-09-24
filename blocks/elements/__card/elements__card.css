@@ -1,11 +1,14 @@
 .elements__card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  max-height: 361px;
   max-width: 282px;
   margin: 0;
+<<<<<<< HEAD
   position: relative;
 
 
 
+=======
+>>>>>>> a3811ab40bce7843cc123f63bd43179916aea0a9
 }

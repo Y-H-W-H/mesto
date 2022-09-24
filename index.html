@@ -13,8 +13,6 @@
 </head>
 
 <body class="root">
-
-
   <header class="header">
     <img src="./images/logo.svg" alt="Лого" class="header__logo">
   </header>
@@ -32,9 +30,9 @@
       <button type="button" class="profile__add-button"></button>
     </section>
 
-
     <section class="elements">
       <ul class="elements__list">
+<<<<<<< HEAD
         <li class="elements__card">
           <img src="./images/kirill-pershin-1088404-unsplash.png" alt="Карачаевск" class="elements__image">
           <div class="elements__bottom">
@@ -79,10 +77,22 @@
             <button aria-label="like-button" type="button" class="elements__like"></button>
           </div>
         </li>
+=======
+        <template id="elements__card">
+          <li class="elements__card">
+            <button aria-label="trash-button" type="button" class="elements__trash"></button>
+            <img src="./images/kirill-pershin-1088404-unsplash.png" alt="" class="elements__image">
+            <div class="elements__bottom">
+              <h2 class=" elements__header"></h2>
+              <button aria-label="like-button" type="button" class="elements__like"></button>
+            </div>
+          </li>
+        </template>
+>>>>>>> a3811ab40bce7843cc123f63bd43179916aea0a9
       </ul>
-
     </section>
 
+<<<<<<< HEAD
 
     <section id="popupE" class="popup popup_profile">
       <div class="popup__container">
@@ -182,30 +192,42 @@
       <button aria-label="popup-close-button" type="button"
         class="popup__close-button popup__close-button_card"></button>
 
+=======
+    <section class="popup">
+      <template id="popup__template">
+        <div id="popup__content">
+          <div class="popup__container">
+            <h2 class="popup__title"></h2>
+            <form name="popup-form" method="get" class="popup__form">
+              <input name="input-name" value="" id="popupname" type="text" class="popup__input" placeholder="">
+              <input name="input-about" value="" id="popupabout" type="text" class="popup__input" placeholder="">
+              <button class="popup__submit-button" type="submit"></button>
+            </form>
+          </div>
+          <button aria-label="popup-close-button" type="button" class="popup__close-button"></button>
+        </div>
+      </template>
+>>>>>>> a3811ab40bce7843cc123f63bd43179916aea0a9
 
+      <template id="popup__card-template">
+        <div id="popup__card" class="popup__card">
+          <div class="popup__container--card">
+            <img src="./images/kirill-pershin-1088404-unsplash.png" alt="" class="popup__image" />
+            <h2 class="popup__title--card"></h2>
+          </div>
+          <button aria-label="popup-close-button" type="button" class="popup__close-button--card"></button>
+        </div>
+      </template>
     </section>
 
 
   </main>
 
-
-
-
   <footer class="footer">
     <p class="footer__copyright">&copy;2022. Mesto Russia</p>
-
   </footer>
 
-
-
-  <script src="./scripts/index.js"></script>
-
+  <script async src="./scripts/index.js"></script>
 </body>
-
-
-
-
-
-
 
 </html>

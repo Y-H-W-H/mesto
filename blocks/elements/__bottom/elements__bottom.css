@@ -1,12 +1,11 @@
 .elements__bottom {
   margin: 0;
   box-sizing: border-box;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 79px;
+  padding: 5px 15px;
   color: black;
   background-color: #FFFFFF;
   border-bottom-left-radius: 10px;
