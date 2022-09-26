@@ -35,50 +35,7 @@
 
     <section class="elements">
       <ul class="elements__list">
-        <li class="elements__card">
-          <img src="./images/kirill-pershin-1088404-unsplash.png" alt="Карачаевск" class="elements__image">
-          <div class="elements__bottom">
-            <h2 class="elements__header">Карачаевск</h2>
-            <button aria-label="like-button" type="button" class="elements__like"></button>
-          </div>
-        </li>
-        <li class="elements__card">
-          <img src="./images//kirill-pershin-1404681-unsplash(1).png" alt="Гора Эльбрус" class="elements__image">
-          <div class="elements__bottom">
-            <h2 class="elements__header">Гора Эльбрус</h2>
-            <button aria-label="like-button" type="button" class="elements__like"></button>
-          </div>
-        </li>
-        <li class="elements__card">
-          <img src="./images/kirill-pershin-1404681-unsplash.png" alt="Домбай" class="elements__image">
-          <div class="elements__bottom">
-            <h2 class="elements__header">Домбай</h2>
-            <button aria-label="like-button" type="button" class="elements__like"></button>
-          </div>
-        </li>
-        <li class="elements__card">
-          <img src="./images/kirill-pershin-1556355-unsplash(1).png" alt="Гора Эльбрус" class="elements__image">
-          <div class="elements__bottom">
-            <h2 class="elements__header">Гора Эльбрус</h2>
 
-            <button aria-label="like-button" type="button" class="elements__like"></button>
-          </div>
-        </li>
-        <li class="elements__card">
-          <img src="./images/kirill-pershin-1088404-unsplash.png" alt="Карачаево-Черкессия" class="elements__image">
-          <div class="elements__bottom">
-            <h2 class="elements__header">Карачаево-Черкессия</h2>
-            <button aria-label="like-button" type="button" class="elements__like"></button>
-          </div>
-        </li>
-        <li class="elements__card">
-
-          <img src="./images/kirill-pershin-1556355-unsplash(1).png" alt="Гора Эльбрус" class="elements__image">
-          <div class=" elements__bottom">
-            <h2 class=" elements__header">Гора Эльбрус</h2>
-            <button aria-label="like-button" type="button" class="elements__like"></button>
-          </div>
-        </li>
       </ul>
 
     </section>
@@ -108,8 +65,8 @@
 
     <template id="card-template">
       <li class="elements__card">
-        <img src="./images/Trash.svg" alt="вмусор" class="elements__trash-btn">
-        <img src="./images/kirill-pershin-1088404-unsplash.png" alt="Карачаевск" class="elements__image">
+        <img src="./images/Trash.svg" alt="Удалить карточку" class="elements__trash-btn">
+        <img src="" alt="" class="elements__image">
         <div class="elements__bottom">
           <h2 class="elements__header">Карачаевск</h2>
           <button aria-label="like-button" type="button" class="elements__like"></button>
@@ -118,51 +75,16 @@
     </template>
 
 
-    <!-- <template id="open-card-template"> -->
-    <section class="open-card">
-      <div class="open-card__container">
-        <button aria-label="popup-close-button" type="button" class="open-card__close"></button>
-        <img src="./images/kirill-pershin-1404681-unsplash(1).png" alt="#" class="open-card__image">
-        <h2 class="open-card__header">Алтай</h2>
+    <!-- <template id="card-scaled-template"> -->
+    <section class="card-scaled">
+      <div class="card-scaled__container">
+        <button aria-label="popup-close-button" type="button" class="card-scaled__close"></button>
+        <img src="./images/kirill-pershin-1404681-unsplash(1).png" alt="#" class="card-scaled__image">
+        <h2 class="card-scaled__header">Алтай</h2>
       </div>
     </section>
 
     <!-- </template> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <section id="popupA" class="popup popup_card">
       <div class="popup__container">
@@ -170,22 +92,14 @@
         <form name="popup-form" method="get" class="popup__form popup__form_card">
           <input name="input-name" value="" id="cardTitle" type="text" class="popup__input popup__input_title"
             placeholder="Название картинки">
-
           <input name="input-about" value="" id="cardLink" type="text" class="popup__input popup__input_link"
             placeholder="Ссылка на картинку">
           <button id="submitbuttonA" class="popup__submit-button" type="submit">Создать</button>
-
         </form>
-
-
       </div>
       <button aria-label="popup-close-button" type="button"
         class="popup__close-button popup__close-button_card"></button>
-
-
     </section>
-
-
   </main>
 
 
@@ -193,11 +107,10 @@
 
   <footer class="footer">
     <p class="footer__copyright">&copy;2022. Mesto Russia</p>
-
   </footer>
 
 
-
+  <script src="./scripts/InitialCards.js"></script>
   <script src="./scripts/index.js"></script>
 
 </body>

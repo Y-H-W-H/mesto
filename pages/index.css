@@ -34,9 +34,9 @@
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/elements/__trash-btn/elements__trash-btn.css);
-@import url(../blocks/open-card/open-card.css);
-@import url(../blocks/open-card/__container/open-card__container.css);
-@import url(../blocks/open-card/_active/open-card_active.css);
-@import url(../blocks/open-card/__image/open-card__image.css);
-@import url(../blocks/open-card/__close/open-card__close.css);
-@import url(../blocks/open-card/__header/open-card__header.css);
+@import url(../blocks/card-scaled/card-scaled.css);
+@import url(../blocks/card-scaled/__container/card-scaled__container.css);
+@import url(../blocks/card-scaled/_active/card-scaled_active.css);
+@import url(../blocks/card-scaled/__image/card-scaled__image.css);
+@import url(../blocks/card-scaled/__close/card-scaled__close.css);
+@import url(../blocks/card-scaled/__header/card-scaled__header.css);

@@ -1,95 +1,44 @@
 
-
-let profileFrame = document.querySelector('.profile')
-let popupProfile = document.querySelector('.popup_profile');
-let popup = document.querySelector('.popup');
-let closeProfileBtn = popupProfile.querySelector('.popup__close-button_profile');
-let editProfileBtn = document.querySelector('.profile__edit-button');
-let profileName = profileFrame.querySelector('.profile__name');
-let profileAbout = profileFrame.querySelector('.profile__about');
-let profileForm = popupProfile.querySelector('.popup__form_profile');
-//==========ADD-CARD-TOOLS
+// РАЗДЕЛ 1. ОБЪЯВЛЕНИЕ ГЛОБАЛЬНЫХ ПЕРЕМЕННЫХ И КОНСТАНТ
+// ===========================================================
 
 
-
-let popupCard = document.querySelector('.popup_card');
-let openCard = document.querySelector('.open-card');
-let AllImages = document.querySelectorAll('.elements__image');
-let openCardImage = openCard.querySelector('.open-card__image');
-let openCardClose = openCard.querySelector('.open-card__close ');
-let openCardHeader = openCard.querySelector('.open-card__header');
-
-openCardClose.addEventListener('click', function () { openCard.classList.remove('open-card_active'); });
-AllImages.forEach((c) => {
-  c.addEventListener('click', function (i) {
-    let gG = i.target.closest('.elements__card');
-    // console.log(gG);
-    console.log(gG.querySelector('.elements__image').src);
-    console.log(gG.querySelector('.elements__header').textContent);
-    openCardImage.src = gG.querySelector('.elements__image').src;
-    openCardHeader.textContent = gG.querySelector('.elements__header').textContent;
-    openCard.classList.add('open-card_active');
-  }
-  )
-});
-
-
-let closeCardBtn = popupCard.querySelector('.popup__close-button_card');
-let addCardBtn = document.querySelector('.profile__add-button');
-let cardTitle = popupCard.querySelector('.popup__input_title');
-let cardLink = popupCard.querySelector('.popup__input_link');
-let cardForm = popupCard.querySelector('.popup__form_card');
+//1.1. Инструментарий для работы с профилем
+const profileFrame = document.querySelector('.profile')
+const popupProfile = document.querySelector('.popup_profile');
+const popup = document.getElementById('popupE');
+const profileCloseBtn = popupProfile.querySelector('.popup__close-button_profile');
+const editProfileBtn = document.querySelector('.profile__edit-button');
+const profileName = profileFrame.querySelector('.profile__name');
+const profileAbout = profileFrame.querySelector('.profile__about');
+const profileForm = popupProfile.querySelector('.popup__form_profile');
+//1.2. Инструментарий для работы с карточками
+const popupCard = document.querySelector('.popup_card');
+const closeCardBtn = popupCard.querySelector('.popup__close-button_card');
+const addCardBtn = document.querySelector('.profile__add-button');
+const cardTitle = popupCard.querySelector('.popup__input_title');
+const cardLink = popupCard.querySelector('.popup__input_link');
+const cardForm = popupCard.querySelector('.popup__form_card');
 const cardTemplate = document.querySelector('#card-template');
-let cardsList = document.querySelector('.elements__list');
-let likeBtns = Array.from(cardsList.querySelectorAll('.elements__like'));
-let cardBottom = Array.from(cardsList.getElementsByClassName('elements__bottom'));
-const trashBtn = cardTemplate.content.querySelector('.elements__trash-btn');
-//==========6 BASIC-CARDS-DIPLAY
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://images.unsplash.com/photo-1663417026017-dd3933e19074?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8&w=1000&q=80'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://images.unsplash.com/photo-1663474830359-4b622189c6ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&w=1000&q=80'
-  },
-  {
-    name: 'Pramod tiwari',
-    link: 'https://images.unsplash.com/photo-1663792804509-26c136d5f7a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=825&q=80'
-  },
-  {
-    name: 'Роза роз',
-    link: 'https://images.unsplash.com/photo-1663848282259-60dda6019692?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzN3x8fGVufDB8fHx8&w=1000&q=80'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://images.unsplash.com/photo-1657214059139-dc58d16118ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwzNXx8fGVufDB8fHx8&w=1000&q=80'
-  }
-];
-let cardImages = document.querySelectorAll('.elements__image');
-
-for (i = 0; i < initialCards.length; ++i) {
-
-  cardImages[i].setAttribute("src", initialCards[i].link);
-
-};
+const cardsList = document.querySelector('.elements__list');
+const likeBtns = Array.from(cardsList.querySelectorAll('.elements__like'));
+const cardBottom = Array.from(cardsList.getElementsByClassName('elements__bottom'));
+const trashBtns = Array.from(cardsList.querySelectorAll('.elements__trash-btn'));
+// 1.3. Звенья, обеспечивающие работу просмотра картинок
+const cardScaled = document.querySelector('.card-scaled');
+const cardScaledImage = cardScaled.querySelector('.card-scaled__image');
+const cardScaledClose = cardScaled.querySelector('.card-scaled__close');
+const cardScaledHeader = cardScaled.querySelector('.card-scaled__header');
 
 
 
-
-
-
-
-
+// РАЗДЕЛ 2. ОПИСАНИЕ ФУНКЦИЙ, РЕАЛИЗУЮЩИХ КОНТЕНТ СТРАНИЦЫ
+// ===========================================================
+//2.1. Функции, обрабатывающие профиль
 function toggleProfile() {
-
   popupProfile.classList.toggle('popup_opened');
-
+  popupProfile.querySelector('.popup__input_name').value = '';
+  popupProfile.querySelector('.popup__input_about').value = '';
 }
 function submitProfileInfo(event) {
   event.preventDefault();
@@ -100,74 +49,87 @@ function submitProfileInfo(event) {
 
 
 }
-editProfileBtn.addEventListener('click', toggleProfile);
-closeProfileBtn.addEventListener('click', toggleProfile);
-profileForm.addEventListener('submit', submitProfileInfo);
 
 
 
-
-
-
-
-
-
-function toggleCard() {
-  popupCard.classList.toggle('popup_opened');
-
-}
-addCardBtn.addEventListener('click', toggleCard)
-closeCardBtn.addEventListener('click', toggleCard);
-cardForm.addEventListener('submit', submitCardInfo);
-
-cardBottom.forEach((element) => {
-
-  element.prepend(trashBtn.cloneNode(true));
-});
-
-let trashBtns = Array.from(cardsList.querySelectorAll('.elements__trash-btn'));
-function submitCardInfo(event) {
-  event.preventDefault();
-  cardsList.prepend(cardTemplate.content.cloneNode(true));
-  let cardsItem = cardsList.querySelector('.elements__card');
-  cardsItem.querySelector('.elements__image').src = cardLink.value;
-  cardsItem.querySelector('.elements__header').textContent = cardTitle.value;
-  cardsItem.querySelector('.elements__trash-btn').onclick = delCard;
-  heartBtn = cardsItem.querySelector('.elements__like')
+// РАЗДЕЛ 3. ПРОПИСЫВАНИЕ ФУНКЦИОНАЛА ДЛЯ ГЕНЕРАЦИИ И РЕНДЕРИНГА КАРТОЧЕК
+// ======================================================================
+// Общая генеративная функция для карточек
+function cardsCreation(l, v) {
+  // Взятие узла карточки с его HTML-содержимым
+  let newCardNode = cardTemplate.content.cloneNode(true);
+  let newCardItem = newCardNode.querySelector('.elements__card');
+  let newCardImage = newCardItem.querySelector('.elements__image');
+  let newCardHeader = newCardItem.querySelector('.elements__header');
+  // Насыщение будущей карточки контентом
+  newCardImage.src = v;
+  newCardHeader.textContent = l;
+  newCardImage.alt = newCardHeader.textContent;
+  //Набрасывание слушателей на соответствующие элементы карточки
+  let trashBtn = newCardItem.querySelector('.elements__trash-btn');
+  trashBtn.onclick = delCard;
+  let heartBtn = newCardItem.querySelector('.elements__like');
   heartBtn.addEventListener('click', function (evt) {
     evt.target.classList.toggle('elements__like_active');
-  })
-  likeBtns.unshift(heartBtn);
-
+  });
+  // Создание формы просмотра каждой генерируемой карточки при клике на картинку
+  newCardImage.addEventListener('click', function (clicked) {
+    let cardToOpen = clicked.target.closest('.elements__card');
+    console.log(cardToOpen);
+    cardScaledImage.src = cardToOpen.querySelector('.elements__image').src;
+    cardScaledHeader.textContent = cardToOpen.querySelector('.elements__header').textContent;
+    cardScaled.classList.add('card-scaled_active');
+  });
   toggleCard();
-  console.log(trashBtns);
-
+  prependNewCard(newCardNode);
+}
+// Функция добавления уже насыщенной карточки в документ разметки
+function prependNewCard(x) {
+  cardsList.prepend(x);
+}
+//Частная функция, порождающая произвольные карточки по запросу пользователя
+function createNewCard(event) {
+  event.preventDefault();
+  cardsCreation(cardTitle.value, cardLink.value);
+}
+//  Механизм, реализующий открытие/закрытие add-card-интерфейса
+function toggleCard() {
+  popupCard.classList.toggle('popup_opened');
+  popupCard.querySelector('.popup__input_title').value = '';
+  popupCard.querySelector('.popup__input_link').value = '';
 
 }
+// Функция удаления карточки через событие клика по удаляющей кнопке
 function delCard(ev) {
-  console.log(ev.target);
   ev.target.closest('.elements__card').remove();
 }
+// Перебор масс. исх. карточек, итеративно взимаются и реализуются их дефолтные данные
+initialCards.forEach((a) => {
+  let initLink = a.link;
+  let initTitle = a.name;
+  cardsCreation(initTitle, initLink);
+})
 
 
-trashBtns.forEach((tb) => { tb.addEventListener('click', delCard) });
 
 
 
+// РАЗДЕЛ 4. УСТАНОВКА ГЛОБАЛЬНЫХ СЛУШАТЕЛЕЙ
+// =====================================================
+// Слушатель событий на элементы профиля
+editProfileBtn.addEventListener('click', toggleProfile);
+profileCloseBtn.addEventListener('click', toggleProfile);
+profileForm.addEventListener('submit', submitProfileInfo);
+
+// Слушатель событий на элементы добавления карточек
+addCardBtn.addEventListener('click', toggleCard)
+closeCardBtn.addEventListener('click', toggleCard);
+cardForm.addEventListener('submit', createNewCard);
 
 
-
-likeBtns.forEach((like) => {
-  like.onclick = function () {
-    like.classList.toggle('elements__like_active');
-  }
+//Закрепление слушателя на кнопке закрытия просмотра карточки
+cardScaledClose.addEventListener('click', function () {
+  cardScaled.classList.remove('card-scaled_active');
 });
-
-
-
-
-
-
-
 
 
