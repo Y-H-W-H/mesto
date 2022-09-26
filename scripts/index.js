@@ -86,6 +86,7 @@ function cardsCreation(l, v) {
 // Функция добавления уже насыщенной карточки в документ разметки
 function prependNewCard(x) {
   cardsList.prepend(x);
+  console.log(cardsList);
 }
 //Частная функция, порождающая произвольные карточки по запросу пользователя
 function createNewCard(event) {

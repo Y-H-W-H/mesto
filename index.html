@@ -13,8 +13,6 @@
 </head>
 
 <body class="root">
-
-
   <header class="header">
     <img src="./images/logo.svg" alt="Лого" class="header__logo">
   </header>
@@ -35,9 +33,7 @@
 
     <section class="elements">
       <ul class="elements__list">
-
       </ul>
-
     </section>
 
 
@@ -46,11 +42,9 @@
         <h2 class="popup__title">
           Редактировать профиль
         </h2>
-
         <form name="popup-form" method="get" class="popup__form popup__form_profile">
           <input name="input-name" value="" id="popupname" type="text" class="popup__input popup__input_name"
             placeholder="Жак Ив Кусто">
-
           <input name="input-about" value="" id="popupabout" type="text" class="popup__input popup__input_about"
             placeholder="Исследователь океана">
           <button id="submitbuttonE" class="popup__submit-button" type="submit">Сохранить</button>
@@ -58,24 +52,9 @@
       </div>
       <button aria-label="popup-close-button" type="button"
         class="popup__close-button popup__close-button_profile"></button>
-
     </section>
 
 
-
-    <template id="card-template">
-      <li class="elements__card">
-        <img src="./images/Trash.svg" alt="Удалить карточку" class="elements__trash-btn">
-        <img src="" alt="" class="elements__image">
-        <div class="elements__bottom">
-          <h2 class="elements__header">Карачаевск</h2>
-          <button aria-label="like-button" type="button" class="elements__like"></button>
-        </div>
-      </li>
-    </template>
-
-
-    <!-- <template id="card-scaled-template"> -->
     <section class="card-scaled">
       <div class="card-scaled__container">
         <button aria-label="popup-close-button" type="button" class="card-scaled__close"></button>
@@ -84,7 +63,7 @@
       </div>
     </section>
 
-    <!-- </template> -->
+
 
     <section id="popupA" class="popup popup_card">
       <div class="popup__container">
@@ -109,7 +88,16 @@
     <p class="footer__copyright">&copy;2022. Mesto Russia</p>
   </footer>
 
-
+  <template id="card-template">
+    <li class="elements__card">
+      <img src="./images/Trash.svg" alt="Удалить карточку" class="elements__trash-btn">
+      <img src="#" alt="#" class="elements__image">
+      <div class="elements__bottom">
+        <h2 class="elements__header">Карачаевск</h2>
+        <button aria-label="like-button" type="button" class="elements__like"></button>
+      </div>
+    </li>
+  </template>
   <script src="./scripts/InitialCards.js"></script>
   <script src="./scripts/index.js"></script>
 
