@@ -1,5 +1,4 @@
-.card-scaled {
-  display: none;
+.popup_card-scaled {
   justify-content: center;
   align-items: center;
   flex-direction: column;

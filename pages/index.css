@@ -1,5 +1,5 @@
-@import url(../vendor/fonts/inter.css);
 @import url(../vendor/normalize.css);
+@import url(../vendor/fonts/inter.css);
 @import url(../blocks/elements/__bottom/elements__bottom.css);
 @import url(../blocks/elements/__card/elements__card.css);
 @import url(../blocks/elements/__header/elements__header.css);
@@ -34,9 +34,13 @@
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/elements/__trash-btn/elements__trash-btn.css);
-@import url(../blocks/card-scaled/card-scaled.css);
-@import url(../blocks/card-scaled/__container/card-scaled__container.css);
-@import url(../blocks/card-scaled/_active/card-scaled_active.css);
-@import url(../blocks/card-scaled/__image/card-scaled__image.css);
-@import url(../blocks/card-scaled/__close/card-scaled__close.css);
-@import url(../blocks/card-scaled/__header/card-scaled__header.css);
+@import url(../blocks/popup_card-scaled/popup_card-scaled.css);
+@import url(../blocks/popup_card-scaled/__container/popup_card-scaled__container.css);
+@import url(../blocks/popup_card-scaled/_active/popup_card-scaled_active.css);
+@import url(../blocks/popup_card-scaled/__image/popup_card-scaled__image.css);
+@import url(../blocks/popup_card-scaled/__close-button/popup_card-scaled__close-button.css);
+@import url(../blocks/popup_card-scaled/__header/popup_card-scaled__header.css);
+@import url(../blocks/popup_addCard/__close-button/popup_addCard__close-button.css);
+@import url(../blocks/popup_profile/__close-button/popup_profile__close-button.css);
+@import url(../blocks/popup_addCard/__container/popup_addCard__container.css);
+@import url(../blocks/popup_profile/__container/popup_profile__container.css);

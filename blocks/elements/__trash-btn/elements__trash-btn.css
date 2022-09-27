@@ -14,5 +14,7 @@
 .elements__trash-btn:hover {
 
   opacity: .6;
+  transform: scale(93%);
   cursor: pointer;
+  transition: opacity 0.1s;
 }

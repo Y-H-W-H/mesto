@@ -15,5 +15,8 @@
 
 .elements__like:hover {
   opacity: 0.5;
+  transform: scale(110%);
+  transition: transform 0.7s ease;
   cursor: pointer;
+
 }

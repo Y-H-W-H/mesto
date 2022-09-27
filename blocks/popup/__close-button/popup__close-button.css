@@ -1,8 +1,6 @@
 .popup__close-button {
-
   position: absolute;
-  right: calc((100vw - 430px)/2 - 38px);
-  top: calc((100vh - 330px)/2 - 45px);
+  z-index: 2;
   background: url(../../../images/Close-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -23,7 +21,5 @@
   .popup__close-button {
     width: 20px;
     height: 20px;
-    right: calc((100vw - 282px)/2);
-    top: calc((100vh - 322px)/2 - 50px);
   }
 }

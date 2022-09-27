@@ -38,7 +38,7 @@
 
 
     <section id="popupE" class="popup popup_profile">
-      <div class="popup__container">
+      <div class="popup__container popup_profile__container">
         <h2 class="popup__title">
           Редактировать профиль
         </h2>
@@ -51,22 +51,23 @@
         </form>
       </div>
       <button aria-label="popup-close-button" type="button"
-        class="popup__close-button popup__close-button_profile"></button>
+        class="popup__close-button popup_profile__close-button"></button>
     </section>
 
 
-    <section class="card-scaled">
-      <div class="card-scaled__container">
-        <button aria-label="popup-close-button" type="button" class="card-scaled__close"></button>
-        <img src="./images/kirill-pershin-1404681-unsplash(1).png" alt="#" class="card-scaled__image">
-        <h2 class="card-scaled__header">Алтай</h2>
+    <section class="popup popup_card-scaled">
+      <div class="popup__container popup_card-scaled__container">
+        <button aria-label="popup-close-button" type="button"
+          class="popup__close-button popup_card-scaled__close-button"></button>
+        <img src="./images/kirill-pershin-1404681-unsplash(1).png" alt="#" class="popup_card-scaled__image">
+        <h2 class="popup_card-scaled__header">Алтай</h2>
       </div>
     </section>
 
 
 
-    <section id="popupA" class="popup popup_card">
-      <div class="popup__container">
+    <section id="popupA" class="popup popup_addCard">
+      <div class="popup__container popup_addCard__container">
         <h2 class="popup__title">Новое место</h2>
         <form name="popup-form" method="get" class="popup__form popup__form_card">
           <input name="input-name" value="" id="cardTitle" type="text" class="popup__input popup__input_title"
@@ -77,7 +78,7 @@
         </form>
       </div>
       <button aria-label="popup-close-button" type="button"
-        class="popup__close-button popup__close-button_card"></button>
+        class="popup__close-button popup_addCard__close-button"></button>
     </section>
   </main>
 
