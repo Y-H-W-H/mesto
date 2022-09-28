@@ -4,7 +4,12 @@
 
 //1.1. Инструментарий для работы с профилем
 const profileFrame = document.querySelector('.profile')
+
+
 const popupProfile = document.querySelector('.popup_profile');
+const popupCardScaled = document.querySelector('.popup_card-scaled');
+const popupAddCard = document.querySelector('.popup_add-card');
+
 const profileEditionBtn = document.querySelector('.profile__edit-button');
 const profileName = profileFrame.querySelector('.profile__name');
 const profileAbout = profileFrame.querySelector('.profile__about');
@@ -12,7 +17,7 @@ const profileForm = popupProfile.querySelector('.popup__form_profile');
 const profileInputName = popupProfile.querySelector('.popup__input_name');
 const profileInputAbout = popupProfile.querySelector('.popup__input_about');
 //1.2. Инструментарий для добавления карточек
-const popupAddCard = document.querySelector('.popup_addCard');
+
 // Ниже в качестве компромисного варианта выбран 'adding' в качестве герундива.
 // Т.о. он указывает на 'добавление' как на сущность, и, стало быть, выступает в роли существительного
 const addingCardButton = document.querySelector('.profile__add-button');
@@ -22,10 +27,10 @@ const cardForm = popupAddCard.querySelector('.popup__form_card');
 const cardTemplate = document.querySelector('#card-template');
 const cardsContainer = document.querySelector('.elements__list');
 // 1.3. Звенья, обеспечивающие работу просмотра картинок
-const popupCardScaled = document.querySelector('.popup_card-scaled');
-const popupCardScaledImage = popupCardScaled.querySelector('.popup_card-scaled__image');
-const popupCardScaledCloseButton = popupCardScaled.querySelector('.popup_card-scaled__close-button');
-const popupCardScaledHeader = popupCardScaled.querySelector('.popup_card-scaled__header');
+
+const popupCardScaledImage = popupCardScaled.querySelector('.popup__image_card-scaled');
+const popupCardScaledCloseButton = popupCardScaled.querySelector('.popup__close-button_card-scaled');
+const popupCardScaledHeader = popupCardScaled.querySelector('.popup__header_card-scaled');
 // 1.4. Сбор коллекции закрывающих попап кнопок
 const popupClosureButtons = document.querySelectorAll('.popup__close-button');
 
