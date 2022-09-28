@@ -53,4 +53,5 @@
 /* ИМПОРТ СТИЛИЗАЦИИ ПОПАПА С ПРОСМОТРОМ КАРТИНКИ */
 @import url(../blocks/popup/_scaled/popup_scaled.css);
 
-@import url(../blocks/popup/__image/_scaled/popup__image_scaled.css);
+@import url(../blocks/popup/__image-scaled/popup__image-scaled.css);
+@import url(../blocks/popup/__header-scaled/popup__header-scaled.css);

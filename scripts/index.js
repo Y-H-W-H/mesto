@@ -28,9 +28,9 @@ const cardTemplate = document.querySelector('#card-template');
 const cardsContainer = document.querySelector('.elements__list');
 // 1.3. Звенья, обеспечивающие работу просмотра картинок
 
-const popupCardScaledImage = popupCardScaled.querySelector('.popup__image_scaled');
+const popupCardScaledImage = popupCardScaled.querySelector('.popup__image-scaled');
 const popupCardScaledCloseButton = popupCardScaled.querySelector('.popup__close-button_scaled');
-const popupCardScaledHeader = popupCardScaled.querySelector('.popup__header_scaled');
+const popupCardScaledHeader = popupCardScaled.querySelector('.popup__header-scaled');
 // 1.4. Сбор коллекции закрывающих попап кнопок
 const popupClosureButtons = document.querySelectorAll('.popup__close-button');
 
