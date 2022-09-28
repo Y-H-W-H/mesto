@@ -7,7 +7,7 @@ const profileFrame = document.querySelector('.profile')
 
 
 const popupProfile = document.querySelector('.popup_profile');
-const popupCardScaled = document.querySelector('.popup_card-scaled');
+const popupCardScaled = document.querySelector('.popup_scaled');
 const popupAddCard = document.querySelector('.popup_add-card');
 
 const profileEditionBtn = document.querySelector('.profile__edit-button');
@@ -28,9 +28,9 @@ const cardTemplate = document.querySelector('#card-template');
 const cardsContainer = document.querySelector('.elements__list');
 // 1.3. Звенья, обеспечивающие работу просмотра картинок
 
-const popupCardScaledImage = popupCardScaled.querySelector('.popup__image_card-scaled');
-const popupCardScaledCloseButton = popupCardScaled.querySelector('.popup__close-button_card-scaled');
-const popupCardScaledHeader = popupCardScaled.querySelector('.popup__header_card-scaled');
+const popupCardScaledImage = popupCardScaled.querySelector('.popup__image_scaled');
+const popupCardScaledCloseButton = popupCardScaled.querySelector('.popup__close-button_scaled');
+const popupCardScaledHeader = popupCardScaled.querySelector('.popup__header_scaled');
 // 1.4. Сбор коллекции закрывающих попап кнопок
 const popupClosureButtons = document.querySelectorAll('.popup__close-button');
 

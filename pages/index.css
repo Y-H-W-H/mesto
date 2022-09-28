@@ -39,18 +39,18 @@
 
 
 /* ИМПОРТ СТИЛЕЙ ДЛЯ ЗАКРЫВАЮЩИХ ПОПАП КНОПОК */
-@import url(../blocks/popup/__close-button/_card-scaled/popup__close-button_card-scaled.css);
+@import url(../blocks/popup/__close-button/_scaled/popup__close-button_scaled.css);
 @import url(../blocks/popup/__close-button/_profile/popup__close-button_profile_.css);
 @import url(../blocks/popup/__close-button/_add-card/popup__close-button_add-card.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
 
 /* ИМПОРТ ПОПАП-КОНТЕЙНЕРОВ */
-@import url(../blocks/popup/__container/_card-scaled/popup__container_card-scaled.css);
+@import url(../blocks/popup/__container/_scaled/popup__container_scaled.css);
 @import url(../blocks/popup/__container/_profile/popup__container_profile.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__container/_add-card/popup__container_add-card.css);
 
 /* ИМПОРТ СТИЛИЗАЦИИ ПОПАПА С ПРОСМОТРОМ КАРТИНКИ */
-@import url(../blocks/popup/_card-scaled/popup_card-scaled.css);
+@import url(../blocks/popup/_scaled/popup_scaled.css);
 
-@import url(../blocks/popup/__image/_card-scaled/popup__image_card-scaled.css);
+@import url(../blocks/popup/__image/_scaled/popup__image_scaled.css);
