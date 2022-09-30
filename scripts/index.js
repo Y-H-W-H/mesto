@@ -10,6 +10,7 @@ const popupProfile = document.querySelector('.popup_profile');
 const popupCardScaled = document.querySelector('.popup_scaled');
 const popupAddCard = document.querySelector('.popup_add-card');
 
+const popupProfileCloseButton = popupProfile.querySelector('.popup__close-button_profile');
 const profileEditionBtn = document.querySelector('.profile__edit-button');
 const profileName = profileFrame.querySelector('.profile__name');
 const profileAbout = profileFrame.querySelector('.profile__about');
@@ -21,6 +22,7 @@ const profileInputAbout = popupProfile.querySelector('.popup__input_about');
 // Ниже в качестве компромисного варианта выбран 'adding' в качестве герундива.
 // Т.о. он указывает на 'добавление' как на сущность, и, стало быть, выступает в роли существительного
 const addingCardButton = document.querySelector('.profile__add-button');
+const popupAddCardCloseButton = popupAddCard.querySelector('.popup__close-button_add-card');
 const cardTitle = popupAddCard.querySelector('.popup__input_title');
 const cardLink = popupAddCard.querySelector('.popup__input_link');
 const cardForm = popupAddCard.querySelector('.popup__form_card');
@@ -44,20 +46,14 @@ function submitProfileInfo(event) {
   event.preventDefault();
   profileName.textContent = profileInputName.value;
   profileAbout.textContent = profileInputAbout.value;
-  wrapPopup(event);
+  // wrapPopup(event);
+  togglePopup(popupProfile)
 }
-//2.2. Универсальные открывашка и закрывашка
-function wrapPopup(c) {
-  c.target.closest('.popup').classList.remove('popup_opened');
-}
-function unwrapPopup(o) {
-  switch (o.target) {
-    case profileEditionBtn: popupProfile.classList.add('popup_opened');
-      break;
-    case addingCardButton: popupAddCard.classList.add('popup_opened');
-      break;
-    default: popupCardScaled.classList.add('popup_opened');
-  }
+
+
+
+function togglePopup(popUp) {
+  popUp.classList.toggle('popup_opened');
 }
 
 
@@ -88,7 +84,7 @@ function createCard(header, link) {
     const cardToOpen = clicked.target.closest('.elements__card');
     popupCardScaledImage.src = cardToOpen.querySelector('.elements__image').src;
     popupCardScaledHeader.textContent = cardToOpen.querySelector('.elements__header').textContent;
-    unwrapPopup(popupCardScaled);
+    togglePopup(popupCardScaled);
   });
   return newCardNode;
 }
@@ -100,7 +96,9 @@ function prependCard(cardNode) {
 function submitCard(event) {
   event.preventDefault();
   prependCard(createCard(cardTitle.value, cardLink.value));
-  wrapPopup(event);
+  cardTitle.value = '';
+  cardLink.value = '';
+  togglePopup(popupAddCard);
 }
 //3.4. Функция удаления карточки через событие клика по удаляющей кнопке
 function deleteCard(ev) {
@@ -119,13 +117,30 @@ initialCards.forEach((card) => {
 
 // РАЗДЕЛ 4. УСТАНОВКА ГЛОБАЛЬНЫХ СЛУШАТЕЛЕЙ
 // =====================================================
-//4.1. Слушатель событий на элементы профиля
-profileEditionBtn.addEventListener('click', unwrapPopup);
+
+profileEditionBtn.addEventListener('click', function () {
+  togglePopup(popupProfile);
+  profileInputName.value = profileName.textContent;
+  profileInputAbout.value = profileAbout.textContent;
+});
 profileForm.addEventListener('submit', submitProfileInfo);
-//4.2. Слушатель событий на элементы добавления карточек
-addingCardButton.addEventListener('click', unwrapPopup)
+
+addingCardButton.addEventListener('click', function () {
+  togglePopup(popupAddCard);
+});
 cardForm.addEventListener('submit', submitCard);
-//4.3. Закрепление слушателя на кнопке закрытия просмотра карточки
-Array.from(popupClosureButtons).forEach((t) => t.addEventListener('click', wrapPopup));
+
+
+
+
+popupAddCardCloseButton.addEventListener('click', function () {
+  togglePopup(popupAddCard);
+});
+popupCardScaledCloseButton.addEventListener('click', function () {
+  togglePopup(popupCardScaled);
+});
+popupProfileCloseButton.addEventListener('click', function () {
+  togglePopup(popupProfile);
+})
 
 

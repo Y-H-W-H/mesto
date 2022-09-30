@@ -40,7 +40,7 @@
 
 /* ИМПОРТ СТИЛЕЙ ДЛЯ ЗАКРЫВАЮЩИХ ПОПАП КНОПОК */
 @import url(../blocks/popup/__close-button/_scaled/popup__close-button_scaled.css);
-@import url(../blocks/popup/__close-button/_profile/popup__close-button_profile_.css);
+@import url(../blocks/popup/__close-button/_profile/popup__close-button_profile.css);
 @import url(../blocks/popup/__close-button/_add-card/popup__close-button_add-card.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
 
