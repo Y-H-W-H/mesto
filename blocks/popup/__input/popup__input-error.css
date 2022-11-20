@@ -1,0 +1,18 @@
+.popup__input_type_error {
+    border-bottom-color: red;
+
+}
+
+.popup__input-error {
+    visibility: hidden;
+    margin-top: 5px;
+    font-size: 12px;
+    color: red;
+    font-weight: 400;
+
+}
+
+.popup__input-error:first-of-type {
+
+    margin-bottom: 30px;
+}

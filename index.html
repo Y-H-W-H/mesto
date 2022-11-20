@@ -9,7 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href="./pages/index.css">
   <title>Mesto</title>
-
 </head>
 
 <body class="root">
@@ -30,60 +29,62 @@
       <button type="button" class="profile__add-button"></button>
     </section>
 
-
     <section class="elements">
       <ul class="elements__list">
       </ul>
     </section>
-
 
     <section id="popupE" class="popup popup_profile">
       <div class="popup__container popup__container_profile">
         <h2 class="popup__title">
           Редактировать профиль
         </h2>
-        <form name="popup-form" method="get" class="popup__form popup__form_profile">
-          <input name="input-name" value="" id="popupname" type="text" class="popup__input popup__input_name"
-            placeholder="Имя">
-          <input name="input-about" value="" id="popupabout" type="text" class="popup__input popup__input_about"
-            placeholder="О себе">
+
+        <form novalidate name="popup-form-profile" method="get" class="popup__form popup__form_profile">
+          <input required minlength="2" maxlength="40" name="input-name" value="" id="popupName-input" type="text"
+            class="popup__input popup__input_name" placeholder="Имя">
+          <span class="popupName-input-error popup__input-error">Необходимо заполнить данное поле</span>
+          <input required minlength="2" maxlength="200" name="input-about" value="" id="popupAbout-input" type="text"
+            class="popup__input popup__input_about" placeholder="О себе">
+          <span class="popupAbout-input-error popup__input-error">Необходимо заполнить данное
+            поле</span>
           <button id="submitbuttonE" class="popup__submit-button" type="submit">Сохранить</button>
         </form>
-      </div>
-      <button aria-label="popup-close-button" type="button"
-        class="popup__close-button popup__close-button_profile"></button>
-    </section>
 
+      </div>
+      <button aria-label="popup-close-button" type="button" class="popup__close-button popup__close-button_profile">
+      </button>
+    </section>
 
     <section class="popup popup_scaled">
       <div class="popup__container popup__container_scaled">
         <button aria-label="popup-close-button" type="button"
           class="popup__close-button popup__close-button_scaled"></button>
         <img src="./images/kirill-pershin-1404681-unsplash(1).png" alt="#" class="popup__image-scaled">
-        <h2 class="popup__header-scaled">Алтай</h2>
+        <h2 class="popup__header-scaled"></h2>
       </div>
     </section>
-
-
 
     <section id="popupA" class="popup popup_add-card">
       <div class="popup__container popup__container_add-card">
         <h2 class="popup__title">Новое место</h2>
-        <form name="popup-form" method="get" class="popup__form popup__form_card">
-          <input name="input-name" value="" id="cardTitle" type="text" class="popup__input popup__input_title"
-            placeholder="Название картинки">
-          <input name="input-about" value="" id="cardLink" type="text" class="popup__input popup__input_link"
-            placeholder="Ссылка на картинку">
+
+        <form novalidate name="popup-form-card" method="get" class="popup__form popup__form_card">
+          <input required minlength="2" maxlength="30" name="input-name" value="" id="cardTitle-input" type="text"
+            class="popup__input popup__input_title" placeholder="Название картинки">
+          <span class="cardTitle-input-error popup__input-error">Вы пропустили это поле</span>
+
+          <input required name="input-about" value="" id="cardLink-input" type="url"
+            class="popup__input popup__input_link" placeholder="Ссылка на картинку">
+          <span class="cardLink-input-error popup__input-error">Введите адрес сайта</span>
           <button id="submitbuttonA" class="popup__submit-button" type="submit">Создать</button>
         </form>
+
       </div>
       <button aria-label="popup-close-button" type="button"
         class="popup__close-button popup__close-button_add-card"></button>
     </section>
   </main>
-
-
-
 
   <footer class="footer">
     <p class="footer__copyright">&copy;2022. Mesto Russia</p>
@@ -99,15 +100,10 @@
       </div>
     </li>
   </template>
-  <script src="./scripts/InitialCards.js"></script>
-  <script src="./scripts/index.js"></script>
+  <script type="module" src="./scripts/Card.js"></script>
+  <script type="module" src="./scripts/FormValidator.js"></script>
+  <script type="module" src="./scripts/index.js"></script>
 
 </body>
-
-
-
-
-
-
 
 </html>
