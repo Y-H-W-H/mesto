@@ -39,3 +39,7 @@ public
 *.sublime-project
 *.sublime-workspace
 sftp-config.json
+
+# Webpack
+node_modules
+dist

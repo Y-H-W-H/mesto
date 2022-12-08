@@ -3,13 +3,12 @@
 
 
 
-export class Card {
-    constructor(cardData, cardTemplateSelector, handleCardClick) {
+export default class Card {
+    constructor({ cardData, cardTemplateSelector, handleCardClick }) {
         this._image = cardData.link;
         this._header = cardData.name;
         this._cardTemplateSelector = cardTemplateSelector;
         this._handleCardClick = handleCardClick;
-
     }
     _getTemplate() {
         const cardTemplate = document.querySelector(this._cardTemplateSelector).content.querySelector('.elements__card').cloneNode(true);
