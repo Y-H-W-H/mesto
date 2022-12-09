@@ -1,6 +1,8 @@
 
 //Nessesary class-imports
-import '../pages/index.css'
+// index.js
+
+import '../pages/index.css'; // добавьте импорт главного файла стилей
 import Card from './Card.js';
 import FormValidator from './FormValidator.js';
 import PopupWithForm from './PopupWIthForm.js';
@@ -11,7 +13,7 @@ import Popup from "./Popup.js";
 
 
 
-// //Импорт картинок
+//Импорт картинок
 // import addButtonImage from '../images/Add-Button.svg';
 // import closeIconImage from '../images/Close-icon.svg';
 // import editButtontImage from '../images/Edit-Button.svg';
