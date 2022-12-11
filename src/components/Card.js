@@ -36,6 +36,7 @@ export default class Card {
         this._link = this._cardElement.querySelector('.elements__image');
         this._name = this._cardElement.querySelector('.elements__header')
         this._link.src = this._image;
+        this._link.alt = this._header;
         this._name.textContent = this._header;
         this._setEventListeners();
         return this._cardElement;

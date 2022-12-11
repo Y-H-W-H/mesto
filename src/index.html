@@ -14,13 +14,13 @@
 
 <body class="root">
   <header class="header">
-    <img src="<%=require('../images/logo.svg')%>" alt="Лого" class="header__logo">
+    <img src="<%=require('./images/logo.svg')%>" alt="Лого" class="header__logo">
   </header>
 
   <main class="main">
     <section class="profile">
       <div class="profile__container">
-        <img src="<%=require('../images/avatar.jpg')%>" alt="Лик Кусто" class="profile__avatar">
+        <img src="<%=require('./images/avatar.jpg')%>" alt="Лик Кусто" class="profile__avatar">
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <button type="button" class="profile__edit-button"></button>
@@ -61,7 +61,7 @@
       <div class="popup__container popup__container_scaled">
         <button aria-label="popup-close-button" type="button"
           class="popup__close-button popup__close-button_scaled"></button>
-        <img src="<%=require('../images/kirill-pershin-1404681-unsplash(1).png')%>" alt="#" class="popup__image-scaled">
+        <img src="<%=require('./images/kirill-pershin-1404681-unsplash(1).png')%>" alt="#" class="popup__image-scaled">
         <h2 class="popup__header-scaled"></h2>
       </div>
     </section>
@@ -93,7 +93,7 @@
 
   <template id="card-template">
     <li class="elements__card">
-      <img src="<%=require('../images/Trash.svg')%>" alt="Удалить карточку" class="elements__trash-btn">
+      <img src="<%=require('./images/Trash.svg')%>" alt="Удалить карточку" class="elements__trash-btn">
       <img src=# alt="#" class="elements__image">
       <div class="elements__bottom">
         <h2 class="elements__header">Карачаевск</h2>
