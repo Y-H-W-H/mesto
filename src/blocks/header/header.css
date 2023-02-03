@@ -1,0 +1,36 @@
+.header {
+
+  margin: 0 auto;
+  padding: 0;
+  max-height: 127.5px;
+  max-width: 880px;
+}
+
+.header::after {
+  content: "";
+  opacity: 0.7;
+  border: 1px solid #545454;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 880px;
+  height: 1px;
+  display: block;
+}
+
+
+
+@media screen and (max-width: 579px) {
+
+  .header {
+    max-width: 550px;
+  }
+
+
+
+  /* .footer {
+    max-width: 282px;
+  } */
+
+
+}

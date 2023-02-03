@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta name="description" content="Проект 8-го cпринта">
+    <meta name="keywords" content="mesto">
+    <meta name="author" content="Тужиков Роман">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Mesto</title>
+</head>
+
+<body class="root">
+    <!-- =================<<HEADER SECTION>>======================================= -->
+    <header class="header">
+        <img src="<%=require('./images/logo.svg')%>" alt="Лого" class="header__logo">
+    </header>
+    <!-- ========================================================================== -->
+    <main class="main">
+        <!-- =================<<PROFILE SECTION>>======================================= -->
+        <section class="profile">
+            <div class="profile__container">
+                <div class="profile__avatar-container">
+                    <img src=# alt="Лик Кусто" class="profile__avatar">
+                    <a class="profile__avatar-edit"></a>
+
+                </div>
+                <div class="profile__info">
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
+                    <button type="button" class="profile__edit-button"></button>
+                    <p class="profile__about">Исследователь океана</p>
+                </div>
+            </div>
+            <button type="button" class="profile__add-button"></button>
+        </section>
+        <!-- =================<<CARDS SECTION>>======================================= -->
+        <section class="elements">
+            <ul class="elements__list">
+            </ul>
+        </section>
+        <!-- ==================<<PROFILE POPUP>>======================================== -->
+        <section id="popupE" class="popup popup_profile">
+            <div class="popup__container popup__container_profile">
+                <h2 class="popup__title">
+                    Редактировать профиль
+                </h2>
+                <form novalidate name="popup-form-profile" method="get" class="popup__form popup__form_profile">
+                    <input required minlength="2" maxlength="40" name="name" value="" id="popupName-input"
+                        type="text" class="popup__input popup__input_name" placeholder="Имя">
+                    <span class="popupName-input-error popup__input-error">Необходимо заполнить данное поле</span>
+                    <input required minlength="2" maxlength="200" name="link" value="" id="popupAbout-input"
+                        type="text" class="popup__input popup__input_about" placeholder="О себе">
+                    <span class="popupAbout-input-error popup__input-error">Необходимо заполнить данное
+                        поле</span>
+                    <button id="submitbuttonE" class="popup__submit-button" type="submit">Сохранить</button>
+                </form>
+            </div>
+            <button aria-label="popup-close-button" type="button"
+                class="popup__close-button popup__close-button_profile">
+            </button>
+        </section>
+        <!-- =====================<<SCALE-PICTURE POPUP>>====================================== -->
+        <section class="popup popup_scaled">
+            <div class="popup__container popup__container_scaled">
+                <button aria-label="popup-close-button" type="button"
+                    class="popup__close-button popup__close-button_scaled"></button>
+                <img src="<%=require('./images/kirill-pershin-1404681-unsplash(1).png')%>" alt="#"
+                    class="popup__image-scaled">
+                <h2 class="popup__header-scaled"></h2>
+            </div>
+        </section>
+        <!-- =======================<<ADD-CARD POPUP>>=================================== -->
+        <section id="popupA" class="popup popup_add-card">
+            <div class="popup__container popup__container_add-card">
+                <h2 class="popup__title">Новое место</h2>
+
+                <form novalidate name="popup-form-card" method="get" class="popup__form popup__form_card">
+                    <input required minlength="2" maxlength="30" name="name" value="" id="cardTitle-input"
+                        type="text" class="popup__input popup__input_title" placeholder="Название картинки">
+                    <span class="cardTitle-input-error popup__input-error">Вы пропустили это поле</span>
+
+                    <input required name="link" value="" id="cardLink-input" type="url"
+                        class="popup__input popup__input_link" placeholder="Ссылка на картинку">
+                    <span class="cardLink-input-error popup__input-error">Введите адрес сайта</span>
+                    <button id="submitbuttonA" class="popup__submit-button" type="submit">Сохранить</button>
+                </form>
+
+            </div>
+            <button aria-label="popup-close-button" type="button"
+                class="popup__close-button popup__close-button_add-card"></button>
+        </section>
+
+        <!-- =======================<<DELETE-CARD POPUP>>=================================== -->
+        <section class="popup popup_delete-card">
+            <div class="popup__container popup__container_delete-card">
+                <button aria-label="popup-close-button" type="button"
+                    class="popup__close-button popup__close-button_delete-card"></button>
+                <h2 class="popup__title">Вы уверены?</h2>
+                <button id="button-delete-card" class="popup__submit-button popup__submit-button_del-card"
+                    aria-label="button-delete-card" type="submit">Да</button>
+            </div>
+        </section>
+        <!--======================<<AVATAR-EDIT POPUP>>===================================   -->
+        <section class="popup popup_avatar">
+            <div class="popup__container popup__container_avatar">
+                <button aria-label="popup-close-button" type="button"
+                    class="popup__close-button popup__close-button_delete-card"></button>
+                <h2 class="popup__title">Обновить аватар</h2>
+                <form novalidate name="popup-form-card" method="get" class="popup__form popup__form_avatar">
+                    <input required name="link" value="" id="avatar-input" type="url"
+                        class="popup__input popup__input_link" placeholder="Ссылка на аватар">
+                    <span class="cardLink-input-error popup__input-error">Введите корректную ссылку</span>
+                    <button id="submitAvatarBtn" class="popup__submit-button popup__submit-button_avatar"
+                        type="submit">Сохранить</button>
+                </form>
+            </div>
+
+        </section>
+
+
+
+    </main>
+    <!-- ============================<<FOOTER>>========================================= -->
+    <footer class="footer">
+        <p class="footer__copyright">&copy;2022. Mesto Russia</p>
+    </footer>
+    <!-- ============================<<END OF PAGE>>========================================= -->
+
+    <!-- ============================<<TEMPLATES>>========================================= -->
+    <template id="card-template">
+        <li class="elements__card">
+            <img src="<%=require('./images/Trash.svg')%>" alt="Удалить карточку" class="elements__trash-btn">
+            <img src=# alt=# class="elements__image">
+            <div class="elements__bottom">
+                <h2 class="elements__header">Карачаевск</h2>
+                <div class="elements__like-block">
+                    <button aria-label="like-button" type="button" class="elements__like"></button>
+                    <p class="elements__likes-counter"></p>
+                </div>
+            </div>
+        </li>
+    </template>
+
+
+    <!-- =========================<<END OF TEMPLATES>>===============================================-->
+    <!-- _______________________________________________________________________________________-->
+</body>
+<!-- ------------------------------#BODY-END#------------------------------------------------>
+<!-- ************************************************************************************-->
+
+</html>

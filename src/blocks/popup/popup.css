@@ -1,0 +1,32 @@
+.popup {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.popup_emerging {
+    animation: popup-emergence 0.8s ease;
+
+}
+
+@keyframes popup-emergence {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

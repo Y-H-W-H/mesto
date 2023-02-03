@@ -1,0 +1,13 @@
+.popup__close-button_add-card {
+  right: calc((100vw - 430px)/2 - 38px);
+  top: calc((100vh - 330px)/2 - 45px);
+}
+
+
+
+@media screen and (max-width: 550px) {
+  .popup__close-button_add-card {
+    right: calc((100vw - 282px)/2);
+    top: calc((100vh - 322px)/2 - 50px);
+  }
+}

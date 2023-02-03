@@ -1,0 +1,17 @@
+.popup__container_profile {
+    width: 430px;
+    color: black;
+    min-height: 330px;
+    max-height: 380px;
+    background-color: white;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 550px) {
+    .popup__container_profile {
+        max-width: 282px;
+        width: 100%;
+        min-height: 322px;
+    }
+}

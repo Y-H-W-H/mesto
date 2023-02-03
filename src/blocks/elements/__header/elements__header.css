@@ -1,0 +1,10 @@
+.elements__header {
+  margin-left: 21px;
+  width: max-content;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+
+
+}

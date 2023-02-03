@@ -1,0 +1,43 @@
+.elements__like {
+    margin: 0 auto 3px;
+    padding: 0;
+    cursor: pointer;
+    background: url(../../../images/Vector0.svg) rgba(255, 255, 255, 1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 22px;
+    height: 19px;
+    border: 0;
+
+}
+
+.elements__like-block {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    margin-right: 30px;
+}
+
+.elements__likes-counter {
+    margin: 0;
+    padding: 0;
+    width: 10px;
+    height: 13px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
+}
+
+.elements__like:hover {
+    opacity: 0.5;
+    transform: scale(110%);
+    transition: transform 0.7s ease;
+    cursor: pointer;
+
+}

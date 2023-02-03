@@ -1,0 +1,19 @@
+.elements__image {
+    margin: 0;
+    width: 282px;
+    height: 282px;
+    padding: 0;
+    object-fit: cover;
+    box-sizing: border-box;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: background-color 0.9s;
+
+}
+
+
+.elements__image:hover {
+    cursor: pointer;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}

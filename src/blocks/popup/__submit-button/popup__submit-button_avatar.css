@@ -1,0 +1,11 @@
+@media screen and (max-width: 550px) {
+    .popup__submit-button_avatar {
+        max-width: 238px;
+        max-height: 46px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        margin: 15px auto 15px;
+    }
+}

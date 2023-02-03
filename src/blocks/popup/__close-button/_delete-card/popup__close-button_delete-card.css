@@ -1,0 +1,13 @@
+.popup__close-button_delete-card {
+    right: -40px;
+    top: -40px;
+}
+
+
+
+@media screen and (max-width: 550px) {
+    .popup__close-button_delete-card {
+        right: 0;
+        top: -28px;
+    }
+}

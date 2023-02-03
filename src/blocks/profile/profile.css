@@ -1,0 +1,28 @@
+.profile {
+  display: flex;
+  color: white;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: min-content;
+  margin: 40px auto 0;
+
+
+
+}
+
+/* * {
+  outline: 1px solid red;
+  outline-offset: -1px;
+} */
+
+
+
+@media screen and (max-width: 880px) {
+  .profile {
+    flex-direction: column;
+    margin: 38px auto 0;
+
+  }
+}

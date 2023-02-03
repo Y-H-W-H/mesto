@@ -1,0 +1,14 @@
+.root {
+
+  max-width: 880px;
+  min-width: 320px;
+  display: block;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  background: #000000;
+  font-family: 'Inter', Arial, sans-serif;
+
+
+
+}
